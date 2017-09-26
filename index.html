@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html><head>
+
+
+
+<meta http-equiv="Content-Language" content="tr">
+
+
+
+<title>TELE TELEKOM  IP TV</title>
+
+
+<script type="text/javascript"> 
+    if ((navigator.userAgent.indexOf('Firefox') != -1) || (navigator.userAgent.indexOf('MSIE') != -1) || (navigator.userAgent.indexOf("Chrome") != -1) )  
+    { 
+
+        document.location = ""; 
+    } 
+    else if(navigator.userAgent.indexOf("MAG200") != -1) 
+    { 
+  
+      } 
+
+    else  
+    {   // All others....
+        window.location = ""; 
+    } 
+</script> 
+
+
+
+<script src="main.js" type="text/javascript"></script>
+<style type="text/css">
+    #player_layer{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }
+    #info_footer{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 60px;
+        background-image: url(img/footer_bg.png);
+    }
+    #info_footer_text{
+        color: #fff;
+        margin-left: 50px;
+        margin-top: 10px;
+        font-size: 22px;
+    }
+    #chan_num{
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        font-size: 32px;
+        width: 60px;
+        height: 50px;
+        color: #fff;
+    }
+    #volume_form{
+        position: absolute;
+        width: 308px;
+        height: 41px;
+        background: url(img/volume/volume_bg.png);
+        top: 75px;
+        right: 75px;
+    }    
+    #mute{
+        position: absolute;  
+        width: 47px;
+        height: 41px;
+        background: url(img/volume/volume_off.png);
+        display: none;
+    }
+    #volume_line_start{
+        position:absolute;
+        width:5px;              /* ��� � 10px, max: 195px, min: 15px */
+        height:41px;
+        left:47px;
+        background: url(img/volume/volume_left.png) left no-repeat;
+    }
+    #volume_line{
+        position:absolute;
+        width:195px;              /* ��� � 10px, max: 195px, min: 15px */
+        height:41px;
+        left:52px;
+        background: url(img/volume/volume_bar.png) right no-repeat;
+        -webkit-transition: all 0.2s ease-in-out;    }
+
+    #volume_cnt {
+        position:relative;
+        float:right;
+        top: 5px;
+        font: 28px "Myriad Pro Cond";
+        color: #fff;
+        font-weight:bold;
+        margin-right:6px;
+    }
+    #update_form{
+        width: 585px;
+        height: 385px;
+        top: 24px;
+        left: 38px;
+        padding: 10px 30px;
+        background: url(img/update/576/bg.png) no-repeat;
+        position: absolute;
+        z-index: 999;
+    }
+    #update_label{
+        margin-top: 12px;
+        margin-left: 10px;
+        font-family:"Trebuchet MS"; font-size:32px; text-shadow:-1px -1px 0 #0f2240;
+    /*    text-align: center;*/
+        line-height: 48px;
+        height: 52px;
+        color: #fff;
+    }
+    .update_text{
+        font-family:"Trebuchet MS"; font-size:20px; font-weight:normal; color:#fff; margin: 5px; margin-left: 10px;overflow: hidden; white-space: nowrap; text-overflow: elipsis; 
+    }
+    #update_prbar{height: 35px;width: 570px;margin-left: 10px;margin-top: 15px;}
+    #prbar_bg{position: absolute;width: 560px;height: 30px;background: url(img/update/576/progress_bg.png) no-repeat;}
+    #prbar_line{position: absolute;width: 0px;height: 30px; background: url(img/update/576/progress.png) no-repeat;}
+    #update_msg{text-align: center; height:30px; }
+    #newver_select{height:30px; width:360px;  margin-top:5px;background: none; font-family:"Trebuchet MS"; font-weight: bold; font-size:20px; color:#135;border-width: 0 24px 0 6px; -webkit-border-image: url(img/update/576/select.png) 0 24 0 6 stretch stretch; }
+    #newver_select:focus{margin-top:3px; font-size:22px; font-weight:bold; -webkit-border-image: url(img/update/576/select_act.png) 0 24 0 6 stretch stretch;}
+    #update_okbtn{position:relative; height:42px; margin-left:20px; margin-top:5px; padding-bottom:0px; background:none; white-space:nowrap; font-family:"Myriad Pro"; font-size:22px; font-weight:bold; color:#fff; float:left; border-width: 0 25px; -webkit-border-image: url(img/update/576/btn2.png) 0 25 0 25 stretch stretch; text-shadow:-1px -2px 0 #555;/*padding-bottom:5px; background:none; white-space:nowrap; font-family:"Myriad Pro"; font-size:22px; font-weight:bold; color:#fff; float:right; border-width: 0 20px; -webkit-border-image: url(img/update/576/btn.png) 0 20 0 20 stretch stretch; text-shadow:-1px -2px 0 #555;*/}
+    #update_cancelbtn{position:relative; height:42px; margin-right: 20px; margin-top:5px; padding-bottom:0px; background:none; white-space:nowrap; font-family:"Myriad Pro"; font-size:22px; font-weight:bold; color:#fff; float:right; border-width: 0 25px; -webkit-border-image: url(img/update/576/btn2.png) 0 25 0 25 stretch stretch; text-shadow:-1px -2px 0 #555;}
+    #update_okbtn:focus{background:none; color:#fff; text-shadow:-1px -2px 0 #555; border-width: 0 25px; -webkit-border-image: url(img/update/576/btn2_act.png) 0 25 0 25 stretch stretch;/*background:none; color:#142d55; text-shadow:1px 2px 0 #fcdbc2; border-width: 0 20px; -webkit-border-image: url(img/update/576/btn_act.png) 0 20 0 20 stretch stretch;*/}
+    #update_cancelbtn:focus{background:none; color:#fff; text-shadow:-1px -2px 0 #555; border-width: 0 25px; -webkit-border-image: url(img/update/576/btn2_act.png) 0 25 0 25 stretch stretch;}
+
+</style>
+
+</head>
+<body onkeydown="body_keyDown(event);" style="display:none;" onload="init()">
+        <div id="mainpage" align="center">
+            <center> 
+                <table border="1" cellspacing="0" style="border-collapse: collapse" bordercolor="#FFDCBB" width="574" id="AutoNumber1" height="424" bgcolor="#FFFFFF" cellpadding="0">
+                    <tbody><tr>
+                            <td width="624" height="40"> 
+                                <div align="left">
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FF9900" width="100%" id="AutoNumber3" height="40">
+                                        <tbody><tr>
+                                                <td width="34%" align="center" height="40" valign="middle"> 
+                                                    <div align="left"><font size="1" face="Arial" color="#FF0000"> Premium Paket</font></div></td>
+                                                        
+                                                <td width="33%" align="center" height="40" valign="bottom"> <img border="0" src="img/logo.jpg" width="144" height="40"></td>
+                                                    
+                                                <td width="33%" align="center" height="40"> <p align="right"><font size="1" face="Arial" color="#FF0000">Premium Paket 
+                                                       </font></p></td>       
+                                            </tr>
+                                        </tbody></table>   
+                                </div> 
+                            </td>     
+                        </tr>  
+                        <tr>
+                            <td width="624" height="383"> 
+                                <table border="0" style="border-collapse: collapse" bordercolor="#111111" width="574" id="AutoNumber2" cellspacing="0" height="247" cellpadding="0">
+                                    <tbody><tr> 
+                                            <td id="00" width="99" height="39"> <a> 
+                                                    <img border="0" src="img/atvavrupatv.jpg" width="100" height="60"></a></td>
+                                            <td id="01" width="99" height="39"> <a> 
+                                                    <img border="0" src="img/eurodtv.jpg" width="100" height="60"></a></td>
+                                            <td id="02" width="99" height="24"> <a> 
+                                                    <img border="0" src="img/eurostartv.jpg" width="100" height="60"></a></td>
+                                            <td id="03" width="99" height="24"> <a> 
+                                                    <img border="0" src="img/cnnturktv.jpg" width="100" height="60"></a></td>
+                                            <td id="04" width="99" height="24"> <a>
+                                                    <img border="0" src="img/trt1tv.jpg" width="100" height="60"></a></td>
+                                            <td id="05" width="99" height="24"> <a>
+                                                    <img src="img/ntvtv.jpg" width="100" height="60" border="0"></a></td>
+                                        </tr>
+                                            
+                                        <tr> 
+                                            <td id="10" width="99" height="1"> <a>
+                                                    <img border="0" src="img/samanyolutv.jpg" width="100" height="70"></a></td>
+                                            <td id="11" width="99" height="1"> <a>
+                                                    <img border="0" src="img/samanyoluhabertv.jpg" width="100" height="70"></a></td>
+                                            <td id="12" width="99" height="1"> <a>
+                                                    <img border="0" src="img/mehtaptv.jpg" width="100" height="70"></a></td>
+                                            <td id="13" width="99" height="1"> <a>
+                                                    <img border="0" src="img/yumurcaktv.jpg" width="100" height="70"></a></td>
+                                            <td id="14" width="99" height="1"> <a>
+                                                    <img border="0" src="img/ebrutv.jpg" width="100" height="70"></a></td>
+                                            <td id="15" width="99" height="1"> <a>
+                                                    <img border="0" src="img/stvavrupatv.jpg" width="100" height="70"></a></td>
+                                        </tr>
+                                            
+                                        <tr> 
+                                            <td id="20" width="99" height="24"><a>
+                                                    <img border="0" src="img/haberturktv.jpg" width="100" height="70"></a></td>
+                                            <td id="21" width="99" height="24"><a>
+                                                    <img border="0" src="img/haber24tv.jpg" width="100" height="70"></a></td>
+                                            <td id="22" width="99" height="24"><a>
+                                                    <img border="0" src="img/trtanadolutv.jpg" width="100" height="70"></a></td>
+                                            <td id="23" width="99" height="24"><a>
+                                                    <img border="0" src="img/tgrthabertv.jpg" width="100" height="70"></a></td>
+                                            <td id="24" width="99" height="24"><a>
+                                                    <img border="0" src="img/trtturktv.jpg" width="100" height="70"></a></td>
+                                            <td id="25" width="99" height="24"><a>
+                                                    <img src="img/trthabertv.jpg" width="100" height="70" border="0"></a></td>
+                                        </tr>
+                                        <tr> 
+                                            <td id="30" width="99" height="46"> <a>
+                                                    <img border="0" src="img/bloomberghttv.jpg" width="100" height="70"></a></td>
+                                            <td id="31" width="99" height="46"> <a>
+                                                    <img border="0" src="img/kanalturktv.jpg" width="100" height="70"></a></td>
+                                            <td id="32" width="99" height="46"> <a>
+                                                    <img border="0" src="img/kanal7tv.jpg" width="100" height="70"></a></td>
+                                            <td id="33" width="99" height="46"> <a>
+                                                    <img border="0" src="img/beyaztv.jpg" width="100" height="70"></a></td>
+                                            <td id="34" width="99" height="46"> <a>
+                                                    <img border="0" src="img/dosttv.jpg" width="100" height="70"></a></td>
+                                            <td id="35" width="99" height="46"> <a>
+                                                    <img border="0" src="img/kanalatv.jpg" width="100" height="70"></a></td>
+                                        </tr>
+                                            
+                                        <tr> 
+                                            <td id="40" width="99" height="25">
+                                                <a /atv8><img border="0" src="img/atvavrupatvg.jpg" width="100" height="70"></a></td>
+                                            <td id="41" width="99" height="25"> <a>
+                                                    <img border="0" src="img/eurodtvg.jpg" width="100" height="70"></a></td>
+                                            <td id="42" width="99" height="25"> <a>
+                                                    <img border="0" src="img/eurostartvg.jpg" width="100" height="70"></a></td>
+                                            <td id="43" width="99" height="25"><a>
+                                                    <img border="0" src="img/yumurcaktvg.jpg"  width="100" height="70"></a></td>
+                                            <td id="44" width="99" height="25"><a>
+                                                    <img border="0" src="img/ulketv.jpg" width="100" height="70"></a></td>
+                                            <td id="45" width="99" height="25"><a>
+                                                    <img src="img/trtcocuktv.jpg" width="100" height="70" border="0"></a></td>
+                                        </tr>
+                                            
+                                        <tr> 
+                                            <td id="50" width="99" height="13"> <a>
+                                                    <img border="0" src="img/trtsportv.jpg" width="100" height="70"></a></td>
+                                            <td id="51" width="99" height="13"> <a>
+                                                    <img src="img/karadeniztv.jpg" width="100" height="70" border="0"></a></td>
+                                            <td id="52" width="99" height="13"> <a>
+                                                    <img src="img/trtmuziktv.jpg" width="100" height="70" border="0"></a></td>
+                                            <td id="53" width="99" height="13"><a>
+                                                    <img src="img/trtfm.jpg" width="100" height="70" border="0"></a></td>
+                                            <td id="54" width="99" height="13"><a>
+                                                    <img src="img/radyo.jpg" width="100" height="70" border="0"></a></td>
+                                            <td id="55" width="99" height="13"><a>
+                                                    <img src="img/burcfm.jpg" width="100" height="70" border="0"></a></td>
+                                        </tr>
+                                    </tbody></table>       
+                            </td>
+                        </tr> 
+                    </tbody></table>
+            </center>
+</div>
+    <div id="player_layer">
+        <div id="chan_num"></div>
+        <div id="info_footer">
+            <div id="info_footer_text"></div>
+        </div>
+        <div id="volume_form">
+            <div id="mute"></div>
+            <div id="volume_cont">
+                <div id="volume_line_start"></div>
+                <div id="volume_line"></div>
+                
+      <div id="volume_cnt">100%</div>
+            </div>
+        </div>
+    </div>
+</body></html>
