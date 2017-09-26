@@ -11,10 +11,19 @@ update_enable = false,
 update_url250 = 'http://mag.infomir.com.ua/250/imageupdate',
 update_url200 = '';
 var channelsObj = [
-    {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
-    {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-    {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"}
-];
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"}
+                   ];
 function init(){
     stb.InitPlayer();
     stb.SetBufferSize(4000,2000000);
