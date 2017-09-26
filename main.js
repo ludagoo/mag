@@ -13,41 +13,7 @@ update_url200 = '';
 var channelsObj = [
     {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
     {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-    {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
-    {"name":"CNNTURK","solution":"","url":"/CNNTURK1051D_STB"},
-    {"name":"TRT1","solution":"","url":"/TRT1A_STB"},
-    {"name":"NTV","solution":"","url":"/NTV1132B_STB"},
-    {"name":"STVUSA","solution":"","url":"/STVUSA1041A_STB"},
-    {"name":"SHABER","solution":"","url":"/SHABER1032C_STB"},
-    {"name":"MEHTAP","solution":"","url":"/MEHTAP1031B_STB"},
-    {"name":"YUMURCAK","solution":"","url":"/YUMURCAK1111B_STB"},
-    {"name":"EBRU","solution":"","url":"/EBRUD_STB"},
-    {"name":"STVAVRUPA","solution":"","url":"/STVAVRUPA1052E_STB"},
-    {"name":"HABERTURK","solution":"","url":"/HABERTURK1091F_STB"},
-    {"name":"HABER24","solution":"","url":"/HABER241122B_STB"},
-    {"name":"TRT ANADOLU","solution":"","url":"/TRTANADOLU_TV"},
-    {"name":"TGRTEU","solution":"","url":"/TGRTEU1181A_STB"},
-    {"name":"TRTTURK","solution":"","url":"/TRTTURK1112A_STB"},
-    {"name":"TRTHABER","solution":"","url":"/TRTHABER2_STB"},
-    {"name":"BLOOMBERG HT","solution":"","url":"/KANAL11092E_STB"},
-    {"name":"KANALTURK","solution":"","url":"/KANALTURK1081C_STB"},
-    {"name":"KANAL7INT","solution":"","url":"/KANAL7INT1042C_STB"},
-    {"name":"BEYAZTV","solution":"","url":"/BEYAZTV1111D_STB"},
-    {"name":"DOSTTV","solution":"","url":"/DOSTTVE_STB"},
-    {"name":"KANALA","solution":"","url":"/KANALAB_STB"},
-    {"name":"ATV8","solution":"","url":"/ATV8E_STB"},
-    {"name":"EUROD8","solution":"","url":"/EUROD8F_STB"},
-    {"name":"EUROSTAR8","solution":"","url":"/EUROSTAR8A_STB"},
-    {"name":"YUMURCAK8","solution":"","url":"/YUMURCAK8C_STB"},
-    {"name":"ULKE TV","solution":"","url":"/ULKETV1082D_STB"},
-    {"name":"TRT COCUK","solution":"","url":"/TRTCOCUK4C_STB"},
-    {"name":"TRT SPOR","solution":"","url":"/TRTSPOR_TV_STB"},
-    {"name":"KARADENIZ TV","solution":"","url":"/KARADENIZ1042D_STB"},
-    {"name":"TRT MUZIK","solution":"","url":"/TRTMUZIK_TV_STB"},
-    {"name":"TRT FM","solution":"","url":"/TRTFM2E"},
-    {"name":"BURC FM","solution":"","url":"8/BURCFM1D"},
-    {"name":"RADYO","solution":"","url":"/RADYO3F"}
-    
+    {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"}
 ];
 function init(){
     stb.InitPlayer();
@@ -101,7 +67,7 @@ function resize(res){
         break;
         case 1080:
             new_width = '100';
-            new_height = '60';
+            new_height = '100';
         break;
     }
     for(var i = 0;i<6;i++){
