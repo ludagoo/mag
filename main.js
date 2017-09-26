@@ -13,7 +13,7 @@ update_url200 = '';
 var channelsObj = [
     {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
     {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-    {"name":"ESPN","auto udp://239.10.10.3:50000"},
+    {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
     {"name":"CNNTURK","solution":"","url":"/CNNTURK1051D_STB"},
     {"name":"TRT1","solution":"","url":"/TRT1A_STB"},
     {"name":"NTV","solution":"","url":"/NTV1132B_STB"},
