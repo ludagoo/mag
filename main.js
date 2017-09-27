@@ -87,16 +87,16 @@ function resize(res){
         new_height = 0;
     switch(res){
         case 480:
-            new_width = '100';
-            new_height = '55';
+            new_width = '200';
+            new_height = '200';
         break;
         case 576:
-            new_width = '100';
-            new_height = '60';
+            new_width = '200';
+            new_height = '200';
         break;
         case 720:
-            new_width = '100';
-            new_height = '60';
+            new_width = '200';
+            new_height = '200';
         break;
         case 1080:
             new_width = '200';
