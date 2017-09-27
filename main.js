@@ -146,13 +146,13 @@ function body_keyDown(e){
         break;
         case 39:
             menuItem_unSelect()
-            h_idx<5?h_idx++:h_idx;
+            h_idx<(column_count-1)?h_idx++:h_idx;
             menuItem_Select()
             log('right');
         break;
         case 40:
             menuItem_unSelect()
-            v_idx<5?v_idx++:v_idx;
+            v_idx<(row_count-1)?v_idx++:v_idx;
             menuItem_Select()
             log('down');
         break;
@@ -231,7 +231,7 @@ function player_keyDown(e){
                 log('down');
                 menuItem_unSelect()
                 if(h_idx>0){h_idx--}else{
-                    if(v_idx>0){v_idx--;h_idx=5}
+                    if(v_idx>0){v_idx--;h_idx=column_count-1}
                 }
                 menuItem_Select();
                 stb.Play(channelsObj[v_idx*column_count+h_idx].url);
@@ -242,8 +242,8 @@ function player_keyDown(e){
             }else{
                 log('up');
                 menuItem_unSelect()
-                if(h_idx<5){h_idx++}else{
-                    if(v_idx<5){v_idx++;h_idx=0}
+                if(h_idx<column_count-1){h_idx++}else{
+                    if(v_idx<row_count-1){v_idx++;h_idx=0}
                 }
                 menuItem_Select();
                 stb.Play(channelsObj[v_idx*column_count+h_idx].url);
@@ -292,7 +292,7 @@ function player_keyDown(e){
         case 40:
             menuItem_unSelect()
             if(h_idx>0){h_idx--}else{
-                if(v_idx>0){v_idx--;h_idx=5}
+                if(v_idx>0){v_idx--;h_idx=column_count-1}
             }
             menuItem_Select();
             stb.Stop();
@@ -305,8 +305,8 @@ function player_keyDown(e){
         break;
         case 38:
             menuItem_unSelect()
-            if(h_idx<5){h_idx++}else{
-                if(v_idx<5){v_idx++;h_idx=0}
+            if(h_idx<column_count-1){h_idx++}else{
+                if(v_idx<row_count-1){v_idx++;h_idx=0}
             }
             menuItem_Select();
             stb.Stop();
