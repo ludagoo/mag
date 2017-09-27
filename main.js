@@ -68,7 +68,7 @@ function init(){
     if(isNaN(cur_volume)){cur_volume = 100;stb.RDir('setenv audio_initial_volume 70');}
     for(var i = 0;i<6;i++){
         for(var y = 0;y<6;y++){
-            document.getElementById(i+''+y).style.WebkitTransform = 'scale(0.75)';
+            document.getElementById(i+''+y).style.WebkitTransform = 'scale(1)';
         }
     }
     menuItem_Select();
