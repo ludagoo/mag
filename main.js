@@ -68,7 +68,7 @@ function init(){
     if(isNaN(cur_volume)){cur_volume = 100;stb.RDir('setenv audio_initial_volume 70');}
     for(var i = 0;i<6;i++){
         for(var y = 0;y<6;y++){
-            document.getElementById(i+''+y).style.WebkitTransform = 'scale(1)';
+            document.getElementById(i+''+y).style.WebkitTransform = 'scale(0.75)';
         }
     }
     menuItem_Select();
@@ -99,8 +99,8 @@ function resize(res){
             new_height = '60';
         break;
         case 1080:
-            new_width = '100';
-            new_height = '100';
+            new_width = '200';
+            new_height = '200';
         break;
     }
     for(var i = 0;i<6;i++){
