@@ -13,40 +13,40 @@ update_url200 = '';
 var channelsObj = [
                    {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
                    {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
+                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
+                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
+                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
                    {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"}
-//                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
-//                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-//                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
-//                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
-//                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-//                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
-//                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
-//                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-//                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
-//                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
-//                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-//                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
-//                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
-//                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-//                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
-//                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
-//                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-//                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
-//                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
-//                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-//                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
-//                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
-//                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-//                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
-//                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
-//                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-//                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
-//                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
-//                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-//                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"},
-//                   {"name":"MBI","solution":"","url":"auto udp://239.10.10.1:50000"},
-//                   {"name":"CSPAN","solution":"","url":"auto udp://239.10.10.2:50000"},
-//                   {"name":"ESPN","solution":"","url":"auto udp://239.10.10.3:50000"}
                    ];
 function init(){
     stb.InitPlayer();
@@ -103,8 +103,8 @@ function resize(res){
             new_height = '100';
         break;
     }
-    for(var i = 0;i<1;i++){
-        for(var y = 0;y<3;y++){
+    for(var i = 0;i<6;i++){
+        for(var y = 0;y<6;y++){
             document.getElementById(i+''+y).getElementsByTagName('a')[0].getElementsByTagName('img')[0].width = new_width;
             document.getElementById(i+''+y).getElementsByTagName('a')[0].getElementsByTagName('img')[0].height = new_height;
         }
