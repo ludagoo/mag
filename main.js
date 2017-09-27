@@ -68,7 +68,7 @@ function init(){
     if(isNaN(cur_volume)){cur_volume = 100;stb.RDir('setenv audio_initial_volume 70');}
     for(var i = 0;i<6;i++){
         for(var y = 0;y<6;y++){
-            document.getElementById(i+''+y).style.WebkitTransform = 'scale(1)';
+            document.getElementById(i+''+y).style.WebkitTransform = 'scale(0.75)';
         }
     }
     menuItem_Select();
@@ -179,14 +179,14 @@ function body_keyDown(e){
     }
 }
 function menuItem_Select(){
-  document.getElementById(v_idx+''+h_idx).style.WebkitTransform = 'scale(1.25)';
+  document.getElementById(v_idx+''+h_idx).style.WebkitTransform = 'scale(1)';
   
   //document.getElementById(v_idx+''+h_idx).style.visibility = "visible";
 
 }
 
 function menuItem_unSelect(){
-  document.getElementById(v_idx+''+h_idx).style.WebkitTransform = 'scale(1)';
+  document.getElementById(v_idx+''+h_idx).style.WebkitTransform = 'scale(0.75)';
   
   //document.getElementById(v_idx+''+h_idx).style.visibility = "visible";
 
